@@ -1,0 +1,248 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji";
+    font-size: 14px;
+    line-height: 1.5;
+    color: #24292f;
+    background-color: #fff;
+}
+
+.box-shadow {
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 5%);
+}
+
+div {
+    .page-header {
+        background-color: #f6f8fa;
+        border-bottom: 1px solid #d0d7de;
+        color: #24292f;
+        height: 100px;
+        margin-top: 72px;
+        padding-top: 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+    }
+
+    .project-container {
+        position: relative;
+        top: 185px;
+        max-width: 100%;
+        z-index: 1;
+
+        .project {
+            display: flex;
+            height: calc(100vh - 280px);
+
+            .dropdown-menu {
+                display: block;
+                font-size: 80%;
+
+                .dropdown-header {
+                    font-size: 0.75rem;
+                }
+
+                &::before {
+                    border: 8px solid transparent;
+                    border-bottom-color: rgba(0, 0, 0, 0.15);
+                    top: -16px;
+                    right: 9px;
+                    left: auto;
+                }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    display: inline-block;
+                    content: "";
+                }
+
+                &::after {
+                    border: 7px solid transparent;
+                    border-bottom-color: #fff;
+                    top: -14px;
+                    right: 10px;
+                    left: auto;
+                }
+            }
+
+            .project-column {
+                background-color: #f6f8fa;
+                border: 1px solid #d7d8de;
+                border-radius: 6px;
+                cursor: default;
+                display: flex;
+                flex-direction: column;
+                min-width: 355px;
+                max-width: 355px;
+                padding-right: 0 !important;
+                padding-bottom: 0 !important;
+                flex: 1;
+
+                &.project-column-focus {
+                    border-color: #0969da;
+                    box-shadow: 0 0 0 0.2em rgba(9, 105, 218, 0.3);
+                }
+
+                .column-add {
+                    color: #57606a;
+                    float: right;
+                    position: relative;
+                    right: 30px;
+                    top: 0;
+                }
+
+                .column-heading {
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    .dropdown {
+                        float: right;
+                        position: relative;
+                        right: 124px;
+                        top: 25px;
+                    }
+                }
+
+                .column-canvas {
+                    background: transparent;
+                    border-radius: 6px;
+                    flex: 1;
+                    overflow: auto;
+                    overflow-x: hidden;
+                    padding-bottom: 10px;
+                    padding-left: 3px;
+                    padding-right: 8px;
+                    transition: padding 0.3s ease-out;
+
+                    .dropdown {
+                        float: right;
+                        position: relative;
+                        right: 163px;
+                        top: 40px;
+                    }
+                }
+
+                .column-menu {
+                    color: #57606a;
+                    float: right;
+                    position: relative;
+                    right: -11px;
+                    top: 0;
+                }
+
+                section.task-add {
+                    margin-left: 4px;
+                    margin-right: 9px;
+                }
+
+                textarea {
+                    height: 8rem;
+                }
+            }
+
+            .project-column-add {
+                background-color: transparent;
+                border: 1px solid #fff;
+
+                button {
+                    background-color: #fff;
+                    border: 1px dashed #d7d8de;
+                    border-radius: 6px;
+                    color: #57606a;
+                    cursor: pointer;
+                    font-weight: 600;
+                    height: 103px;
+                    outline: none;
+                    width: 330px;
+                }
+
+                section {
+                    width: 330px;
+                }
+            }
+
+            .project-task {
+                background-color: #fff;
+                border: 1px solid #d7d8de;
+                border-radius: 6px;
+                cursor: move;
+                min-height: 90px;
+                user-select: none;
+
+                &.hidden {
+                    display: none !important;
+                }
+
+                &.project-task-focus {
+                    border-color: #0969da;
+                    box-shadow: 0 0 0 0.2em rgba(9, 105, 218, 0.3);
+                }
+
+                &.project-task-edit {
+                    cursor: default !important;
+                }
+
+                .task-body {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    position: relative;
+                    top: -20px;
+                }
+
+                .task-icon {
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                }
+
+                .task-menu {
+                    color: #57606a;
+                    position: relative;
+                    right: -89%;
+                    top: 0;
+                    z-index: 4;
+                }
+            }
+        }
+
+        .project-container-menu {
+            a {
+                color: #57606a;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    .max-width {
+        max-width: 100%;
+    }
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.logo a {
+    color: #333;
+    text-decoration: none;
+}
