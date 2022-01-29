@@ -339,7 +339,7 @@ const Project: React.FC<{}> = () => {
                 <div className='row mb-3 project-container-menu'>
                     <div className='col'>
                         {(Object.entries(columns).length > 1) &&
-                            <a className='small' href='' onClick={(e: React.MouseEvent) => onScrollToAddColumns(e)}><BsPlus style={{ fontSize: '1.5em' }} /> Add Column</a>
+                            <a className='small' href='/' onClick={(e: React.MouseEvent) => onScrollToAddColumns(e)}><BsPlus style={{ fontSize: '1.5em' }} /> Add Column</a>
                         }
 
                         &nbsp;
@@ -379,18 +379,18 @@ const Project: React.FC<{}> = () => {
 
                                                                             {column.name}
 
-                                                                            <a className='column-add' href='' onClick={(e: React.MouseEvent) => onShowTaskAddOptionsClick(e, id)}>
+                                                                            <a className='column-add' href='/' onClick={(e: React.MouseEvent) => onShowTaskAddOptionsClick(e, id)}>
                                                                                 <BsPlus style={{ fontSize: '1.5em' }} />
                                                                             </a>
-                                                                            <a className='column-menu' href='' onClick={(e: React.MouseEvent) => onShowColumnOptionsClick(e, id)}>
+                                                                            <a className='column-menu' href='/' onClick={(e: React.MouseEvent) => onShowColumnOptionsClick(e, id)}>
                                                                                 <BsThreeDots />
                                                                             </a>
 
                                                                             {
                                                                                 (currentColumnOption === id) &&
                                                                                 <DropDownMenu title={'Column Options'}>
-                                                                                    <a className='dropdown-item' href='' onClick={(e: React.MouseEvent) => onShowColumnEditClick(e, id)}>Edit column</a>
-                                                                                    <a className='dropdown-item' href='' onClick={(e: React.MouseEvent) => onDeleteColumnClick(e, id)}>Delete column</a>
+                                                                                    <a className='dropdown-item' href='/' onClick={(e: React.MouseEvent) => onShowColumnEditClick(e, id)}>Edit column</a>
+                                                                                    <a className='dropdown-item' href='/' onClick={(e: React.MouseEvent) => onDeleteColumnClick(e, id)}>Delete column</a>
                                                                                 </DropDownMenu>
                                                                             }
                                                                         </div>
@@ -427,8 +427,8 @@ const Project: React.FC<{}> = () => {
                                                                                                                 <>
                                                                                                                     {(currentTaskOption === item.id) &&
                                                                                                                         <DropDownMenu title={'Task Options'}>
-                                                                                                                            <a className='dropdown-item' href='' onClick={(e: React.MouseEvent) => onShowTaskEditOptionsClick(e, item.id)}>Edit task</a>
-                                                                                                                            <a className='dropdown-item' href='' onClick={(e: React.MouseEvent) => onDeleteTaskClick(e, id, item.id)}>Delete task</a>
+                                                                                                                            <a className='dropdown-item' href='/' onClick={(e: React.MouseEvent) => onShowTaskEditOptionsClick(e, item.id)}>Edit task</a>
+                                                                                                                            <a className='dropdown-item' href='/' onClick={(e: React.MouseEvent) => onDeleteTaskClick(e, id, item.id)}>Delete task</a>
                                                                                                                         </DropDownMenu>
                                                                                                                     }
 
@@ -448,7 +448,7 @@ const Project: React.FC<{}> = () => {
                                                                                                                         <div>
                                                                                                                             <BsCardText className='task-icon' />
 
-                                                                                                                            <a className='task-menu' href='' onClick={(e: React.MouseEvent) => onShowTaskOptionsClick(e, item.id)}>
+                                                                                                                            <a className='task-menu' href='/' onClick={(e: React.MouseEvent) => onShowTaskOptionsClick(e, item.id)}>
                                                                                                                                 <BsThreeDots />
                                                                                                                             </a>
 
