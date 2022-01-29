@@ -31,7 +31,8 @@
         "build": "react-scripts build",
         "test": "jest --detectOpenHandles",
         "test:watch": "jest --watch",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "precommit": "pretty-quick --stage"
     },
     "eslintConfig": {
         "extends": [
@@ -50,5 +51,12 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "prettier": "^2.5.1",
+        "pretty-quick": "^3.1.3"
     }
 }
