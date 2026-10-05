@@ -43,9 +43,3 @@ npm build
 ## Copyright and Ownership
 
 All terms used are copyright to their original authors.
-
-## Live Demo
-
-Live demo hosted in Microsoft Azure [React TypeScript Demo Project](https://dev-react-typescript-demo-re01.azurewebsites.net/).
-
-Azure F1 instances are :snowflake: ice cold. That first load will need some :sun_with_face: warming up.
